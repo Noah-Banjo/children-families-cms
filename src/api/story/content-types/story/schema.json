@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "Story"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "storyType": {
+      "type": "enumeration",
+      "enum": [
+        "Oral History",
+        "Document",
+        "Photograph",
+        "Letter",
+        "Audio Recording"
+      ]
+    },
+    "family": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::family.family",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": ""
+            },
+            ""
+          ]
+        }
+      }
+    },
+    "mediaFiles": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "timePeriod": {
+      "type": "string"
+    }
+  }
+}
