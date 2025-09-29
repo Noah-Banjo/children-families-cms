@@ -385,6 +385,7 @@ export interface ApiFamilyFamily extends Struct.CollectionTypeSchema {
   };
   attributes: {
     childrenNames: Schema.Attribute.String;
+    collection: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -396,6 +397,8 @@ export interface ApiFamilyFamily extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    imageDate: Schema.Attribute.String;
+    imageSource: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -403,11 +406,13 @@ export interface ApiFamilyFamily extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String & Schema.Attribute.Required;
+    photographer: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     timePeriod: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    usageRights: Schema.Attribute.String;
   };
 }
 

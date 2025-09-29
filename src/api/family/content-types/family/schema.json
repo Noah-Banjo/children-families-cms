@@ -39,6 +39,21 @@
     },
     "childrenNames": {
       "type": "string"
+    },
+    "imageSource": {
+      "type": "string"
+    },
+    "photographer": {
+      "type": "string"
+    },
+    "imageDate": {
+      "type": "string"
+    },
+    "collection": {
+      "type": "string"
+    },
+    "usageRights": {
+      "type": "string"
     }
   }
 }
