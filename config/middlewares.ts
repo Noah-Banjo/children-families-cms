@@ -2,7 +2,19 @@ export default [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: [
+        'https://children-families-little-rock.onrender.com',
+        'http://localhost:3000',
+        'http://localhost:5173'
+      ],
+      credentials: true,
+      headers: '*',
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
