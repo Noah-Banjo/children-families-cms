@@ -7,7 +7,7 @@ export default [
     config: {
       enabled: true,
       origin: [
-        'https://children-families-little-rock.onrender.com',
+        'https://childrenandfamilieslr.com',
         'http://localhost:3000',
         'http://localhost:5173'
       ],
