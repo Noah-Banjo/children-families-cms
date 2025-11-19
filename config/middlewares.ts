@@ -9,6 +9,8 @@ export default [
       origin: [
         'https://childrenandfamilieslr.com',
         'https://www.childrenandfamilieslr.com',
+        'https://lr9childrenandfamilies.com',
+        'https://www.lr9childrenandfamilies.com',
         'http://localhost:3000',
         'http://localhost:5173'
       ],
